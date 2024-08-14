@@ -3,7 +3,6 @@ const Product = require("../models/productModel");
 const createProduct = async (req, res) => {
   const { name, description, price, category } = req.body;
   
-  // Cloudinary'den URL'leri almak için Cloudinary'nin 'files' özelliğini kullanarak URL'leri alın
   const images = req.files.map(file => file.path);
 
   try {
@@ -12,7 +11,7 @@ const createProduct = async (req, res) => {
       description,
       price,
       category,
-      images,  // Cloudinary URL'lerini burada saklayın
+      images,  
     });
     await newProduct.save();
     res.status(200).json({
