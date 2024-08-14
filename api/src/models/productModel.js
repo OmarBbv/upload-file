@@ -2,7 +2,6 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-// Ürün şeması
 const productSchema = new Schema(
   {
     name: {
@@ -38,7 +37,6 @@ const productSchema = new Schema(
   }
 );
 
-// Model oluşturma
 const Product = mongoose.model("Product", productSchema);
 
 module.exports = Product;
