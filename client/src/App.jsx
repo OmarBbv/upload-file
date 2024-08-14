@@ -31,7 +31,7 @@ const App = () => {
     form.append('category', formData.category);
 
     for (let i = 0; i < images.length; i++) {
-      form.append('images', images[i]);  // Her bir resmi formData'ya ekleyin
+      form.append('images', images[i]);  
     }
 
     try {
